@@ -10,7 +10,7 @@ namespace AlexzanderCowell
         [SerializeField] private Text bottomText; // Text that sits at the bottom of the UI Screen that is located on the trainer.
         [SerializeField] private Text topText; // Text that sits at the top of the UI Screen that is located on the trainer.
         private bool nextMessagePlease; // Transfers a bool to allow the KeyCode E to be pressed from the collider.
-        private int maxMessages = 11; // // Sets a max message limit for the clamp used underneath.
+        private int maxMessages = 11; // Sets a max message limit for the clamp used underneath.
         private bool hasSpawned = false; // Checks to make sure only 1 instance of the spawned boots is sent and not multiple when message 9 is the current message count.
         [HideInInspector]
         public int currentRMessages; // Current message count for what message is at what and keeps the dialog going. It's used in the Character Movement script as well to allow the player to do stuff at the end.
@@ -28,7 +28,6 @@ namespace AlexzanderCowell
         }
         private void Update()
         {
-
             if (nextMessagePlease && Input.GetKeyDown(KeyCode.E)) // Will only activate if I am in the collider and the next message please is set true as well as me pressing the E on the keyboard.
             {
                 currentRMessages = Mathf.Clamp(currentRMessages +1, 0, maxMessages); // Keeps the current R messages from going further then the max messages and only increment by +1 with the min value to start is 0.
