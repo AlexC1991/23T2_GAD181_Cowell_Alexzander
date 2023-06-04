@@ -3,32 +3,29 @@ using UnityEngine.SceneManagement;
 
 namespace AlexzanderCowell
 {
-   
     public class MainMenuScript : MonoBehaviour
-    {    
-        [SerializeField] private CharacterMovement characterM;
-
-        public void StartGame()
+    {
+        public void StartGame() // Public Method to be called by a button in Unity.
         {
-            SceneManager.LoadScene("Maze 1");
+            SceneManager.LoadScene("Maze 1"); // Loads the scene called Maze 1.
         }
 
-        public void QuitGame()
+        public void QuitGame() // Public Method to be called by a button in Unity.
         {
-            Application.Quit();
+            Application.Quit(); // Quits the application when called.
         }
         
-        public void FirstTutorialPlease()
+        public void FirstTutorialPlease() // Public Method to be called by a button in Unity.
         {
-            SceneManager.LoadScene("BeforeMaze1");
+            SceneManager.LoadScene("BeforeMaze1"); // Loads the scene called BeforeMaze1.
         }
 
-        public void MainMenu()
+        public void MainMenu() // Public Method to be called by a button in Unity.
         {
-            SceneManager.LoadScene("StartMenu");
+            SceneManager.LoadScene("StartMenu"); // Loads the scene called StartMenu.
         }
 
-        //public void ResetGame()
+        //public void ResetGame() // Supposed to reset the game back to the main start room but it gave me bug issues which i had to leave and come back to another date to fix.
         //{
             //characterM.respawnStart = true;
             //characterM.MainStartRoomSpawn();

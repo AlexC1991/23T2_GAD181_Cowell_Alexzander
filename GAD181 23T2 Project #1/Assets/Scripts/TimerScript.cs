@@ -62,19 +62,19 @@ public class TimerScript : MonoBehaviour
             previousTime = currentTime; // Previous time will equal whatever the currentTime is.
         }
         
-        if (character.moreTime == true) // Checks if the Character Movement script 
+        if (character.moreTime == true) // Checks if the Character Movement script more time bool is true. If so it will give the clock in game more time. 
         {
-            currentTime = startTime;
-            previousTime = currentTime;
-            character.moreTime = false;
+            currentTime = startTime; // Whatever the current time is at it will make the current time be back to the start time.
+            previousTime = currentTime; // Previous time will reset to whatever the current time is again.
+            character.moreTime = false; // The more time bool will turn back to false preventing any issues with communication between the scripts.
         }
         
-        previousTime = currentTime;
+        previousTime = currentTime; // previous time continues to be updated via the Update method.
     }
 
-    private void StartCountingDown()
+    private void StartCountingDown() // Time count down method to execute the count down timer inside of it.
     {
-        currentTime -= 0.7f * Time.deltaTime;
+        currentTime -= 0.7f * Time.deltaTime; // Current times count down by 0.7f every frame times Time. Delta Time.
     }
     
 }
