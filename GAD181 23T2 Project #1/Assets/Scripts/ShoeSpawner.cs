@@ -19,7 +19,7 @@ namespace AlexzanderCowell
 
         private void Start()
         {
-            currentTime = maxTimer; // current Time will always start off being equal to the max time.
+            currentTime = maxTimer; // Current Time will always start off being equal to the max time.
         }
         private void Update()
         {
@@ -32,14 +32,14 @@ namespace AlexzanderCowell
                 currentTime = maxTimer; // Current timer will then re equal the max timer to reset.
             }
             currentTime -= 0.8f * Time.deltaTime; // Current timer is minuses over a 0.8f per frame using Time.delta time.
-        }
+        } 
 
-        private void OnEnable()
+        private void OnEnable() // Start of the Action Event.
         {
             CharacterMovement.StartSpawningThemBoots += GetSetAndSpawn; // Listens, waits and picks up the Action Event Character Movement script sent out. This is what tells sBoots to be true or false for spawning the rocket boots/shoes.
         }
 
-        private void OnDisable()
+        private void OnDisable() // End of the Action Event.
         {
             CharacterMovement.StartSpawningThemBoots -= GetSetAndSpawn; // Stops listening to the Action Event Character Movement script sent out.
         }
