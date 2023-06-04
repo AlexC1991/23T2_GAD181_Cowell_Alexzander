@@ -6,7 +6,7 @@ namespace AlexzanderCowell
 
 public class TimerScript : MonoBehaviour
 {
-    [SerializeField] private Text countDownClockTxT; // Grabs the text used on the clock to display the countdown.
+    [SerializeField] private Text countDownClocFSkTxT; // Grabs the text used on the clock to display the countdown.
     private float startTime = 10; // Starting clock time and max time.
     [HideInInspector] // Hides the variable underneath from being displayed in the inspector in Unity.
     public float currentTime; // Current Time that is used inside of the timer. This holds whatever is currently the time is at. 
